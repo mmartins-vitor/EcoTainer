@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background: #00ff88;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            background: #201b2c;
+            width: 400px;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+        }
+        form label {
+            display:block;
+            font-size: 20px;
+            margin: 20px 0 10px;
+            font-family: 'Gotu', sans-serif;
+            font-weight: bold;
+        }
+        .input-padrao {
+            display: block;
+            margin: 0 0 20px;
+            width: 50%;
+            padding: 10px;
+        
+        }
+        .enviar {
+            width:200px;
+            padding: 15px 0;
+            background: #FF1493;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="center-form">
+	
+	<div class="container">	
+		<div class="box">
+		
+			<form action="POST">
+				<center>
+					<h2 class="subtitulo-claro">Cadastro de Containner</h2>
+					<label for="area">Dimensão</label> 
+					<input type="number" id="area" /> 
+					<label for="produto">Produto</label> 
+					<input type="text" id="produto" /> 
+					<label for="fabricacao">Ano de Fabricação</label> 
+					<input type="number" id="fabricacao" /> 
+					<br/>
+					<input type="submit" value="Enviar" class="enviar" />
+				</center>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

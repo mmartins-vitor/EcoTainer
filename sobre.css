@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-sobre { 
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sup-sobre {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sup-sobre > h1 {
+    color:#77ffc0;
+    font-size: 3vw;
+}
+
+.sup-sobre > p {
+    color:#77ffc0;
+    font-size: 2vw;
+}
+
+.inf-sobre {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.valores {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.missao {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valores > h2 {
+    color:#77ffc0;
+    font-size: 2vw;
+}
+
+.missao > h2 {
+    color:#77ffc0;
+    font-size: 2vw;
+}
