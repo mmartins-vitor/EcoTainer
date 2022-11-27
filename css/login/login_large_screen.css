@@ -86,7 +86,14 @@ a:hover {
     font-weight: 800;
 }
 
-.card-login > a {
+.card-login nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-login nav > a {
     color: #00ff88;
     font-weight: 800;
 }

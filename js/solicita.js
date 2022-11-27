@@ -2,6 +2,7 @@ const header = document.getElementsByTagName('header')[0];
 const toggle = document.querySelector('[toggle]');
 const links = document.querySelector('#list_links');
 const price = document.querySelectorAll('.grid-item-price');
+const small_menu = document.createElement('div');
 
 price.forEach(value => {
     value.textContent = Number(value.textContent).toLocaleString('pt-br', {
@@ -16,13 +17,16 @@ toggle.onclick = e => {
     if(header.firstElementChild === links) {
         
         header.removeChild(links)
-        header.after(links); 
+        // header.after(links); 
+        header.after(small_menu); 
+        small_menu.appendChild(links)
+        small_menu.classList.add('small_menu_container')
         links.classList.add('small_menu');
         
 
     } else {
 
-        document.body.removeChild(links);
+        document.body.removeChild(small_menu);
         header.insertBefore(links, header.firstElementChild);
         links.classList.remove('small_menu');
 
@@ -31,9 +35,9 @@ toggle.onclick = e => {
 }
 
 window.onresize = () => {
-    if(window.innerWidth > 793) {
+    if(window.innerWidth > 816) {
         if(header.firstElementChild === toggle) {
-            document.body.removeChild(links)
+            document.body.removeChild(small_menu)
             header.insertBefore(links, toggle);
             links.classList.remove('small_menu');
         }

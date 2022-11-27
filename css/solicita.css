@@ -1,9 +1,14 @@
 :root {
+    --bg-fundo-destaque: #010102;
     --bg-color: #201b2c;
     --bg-btn-login: #00ff88;
     --bg-input: #514869;
     --color-title: #77ffc0;
     --color-card-title: #00ff88;
+    --bg-icone-facebook: #4267B2;
+    --bg-icone-twitter: #36B9FF;
+    --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --bg-icone-youtube: #F20000;
 }
 
 * {
@@ -15,6 +20,7 @@
 
 a {
     text-decoration: none;
+    color: #000;
 }
 
 img {
@@ -25,11 +31,11 @@ img {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bg-color);
-    margin: 40px 0;
 }
 
 header {
-    height: 100px;
+    background-color: var(--bg-fundo-destaque);
+    height: 150px;
     display: flex;
     position: relative;
 }
@@ -75,6 +81,11 @@ span.material-symbols-outlined {
   background-color: #fafafa;
 }
 
+div.small_menu_container {
+    background-color: var(--bg-fundo-destaque);
+    padding-bottom: 50px;
+}
+
 .small_menu {
     width: 300px;
     margin: auto;
@@ -97,7 +108,6 @@ span.material-symbols-outlined {
 .small_menu li a {
     flex: 1;
     padding: 10px;
-    color: black;
 }
 
 span.material-symbols-outlined:hover,
@@ -106,7 +116,7 @@ span.material-symbols-outlined:hover,
 }
 
 main {
-    padding: 60px 30px;
+    padding: 100px 30px;
 }
 
 main div.grid-list-items {
@@ -158,6 +168,160 @@ a.grid-item .grid-item-price {
     text-align: right;
 }
 
+aside {
+    background-color: var(--bg-fundo-destaque);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+}
+
+aside div {
+    flex: 1;
+}
+
+aside div h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+aside a img {
+    width: 150px;
+}
+
+footer {
+    background-color: var(--bg-fundo-destaque);
+    display: flex;
+    flex-flow: column wrap;
+    grid-template-rows: 1fr auto;
+}
+
+footer div.grid-container {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 80px 0;
+    gap: 10px;
+}
+
+footer div.grid-container div {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+footer div.grid-container div h4 {
+    padding: 8px;
+}
+
+footer div.grid-container div ul {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+    justify-content: start;
+    padding: 10px 0;
+}
+
+footer div.grid-container div ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+}
+
+footer div.grid-container div ul li a:hover {
+    text-decoration: underline;
+}
+
+footer div.grid-container div ul li a img.fb:hover {
+    background-color: var(--bg-icone-facebook);
+}
+
+footer div.grid-container div ul li a img.tt:hover {
+    background-color: var(--bg-icone-twitter);
+}
+
+footer div.grid-container div ul li a img.ins:hover {
+    background-image: var(--bg-icone-insta);
+}
+
+footer div.grid-container div ul li a img.yt:hover {
+    background-color: var(--bg-icone-youtube);
+}
+
+footer div.grid-container div ul li a,
+footer div.grid-container div ul li a p,
+footer .info-address p {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer div.grid-container img {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2px;
+    width: 25px;
+}
+
+footer .info-address {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+footer .info-address p {
+    padding: 0 20px;
+}
+
+footer .info-address div {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+footer .info-address img {
+    width: 45px;
+}
+
+/* 3 colunas */
+@media (max-width: 1000px) and (min-width: 810px) {
+    main div.grid-list-items {
+        grid-template-columns: repeat(3, minmax(auto,1fr));
+    }    
+}
+
+/* Configura o display do aside para grid */
+@media (max-width:1000px) {
+
+    aside {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    aside div {
+        grid-column: 1 / -1;
+    }
+
+    aside a.app_store {
+        grid-area: 2 / 1 / -1 / 2;
+        place-self: center end;
+    }
+
+    aside a.google_play {
+        grid-area: 2 / 2 / -1 / -1;
+        place-self: center start;
+    }
+}
 
 /* Momento em que mostro o toggle */
 @media (max-width:816px) {
@@ -178,28 +342,62 @@ a.grid-item .grid-item-price {
     [list_links] {
         display: block;
     }
+
 }
 
-/* 3 colunas */
-@media (max-width: 1000px) and (min-width: 810px) {
-    main div.grid-list-items {
-        grid-template-columns: repeat(3, minmax(auto,1fr));
-    }    
-}
+/* configura o display do footer */
+@media (max-width:810px){
 
+    footer p#footer_gmail,
+    footer p#footer_phone,
+    footer p#footer_adress {
+        display: none;
+    }
+}
 
  /* diminui o numero de columns dos items para 2 x 2 */
 @media (max-width: 810px) and (min-width: 570px) {
     main div.grid-list-items {
         grid-template-columns: repeat(2, minmax(auto,1fr));
-    }    
+    }   
 }
 
-
-
-@media (max-width: 569px) { 
-    main div.grid-list-items {
+@media (max-width:600px) {
+    footer div.grid-container {
         grid-template-columns: 1fr;
+        padding: 40px 0 60px 0;
+        gap: 60px;
+    }
+
+    footer div.grid-container div h4 {
+        text-align: center;
+    }
+
+    footer div.grid-container div ul {
+        width: 100%;
+        align-items: center;
+    }
+
+    footer div.grid-container div ul li a {
+        justify-content: center;
+    }
+
+    footer div.grid-container div.social ul li {
+        width: 130px;
+    }
+
+    footer div.grid-container div.social ul li a {
+        justify-content: start;
     }
 }
 
+@media (max-width: 569px) { 
+
+    main div.grid-list-items {
+        grid-template-columns: 1fr;
+    }
+
+    aside div p {
+        display: none;
+    }
+}
