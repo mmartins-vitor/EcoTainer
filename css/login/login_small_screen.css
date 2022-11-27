@@ -1,0 +1,33 @@
+    .main-login {
+        flex-direction: column;
+    }
+
+    .main-login div {
+        flex: 1;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        padding: 0;
+        width: 100%;
+    }
+
+    .right-login {
+        padding:0 30px;
+        width: 100%;
+    }
+
+    .left-login-image {
+        width: 100%;
+    }
+
+    .card-login {
+        width: 60%;
+    }
+
+    .faixa {
+        height: 200px;
+    }

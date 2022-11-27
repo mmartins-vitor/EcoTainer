@@ -1,75 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
-
-body {
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+:root {
+    --bg-color: #201b2c;
+    --bg-btn-login: #00ff88;
+    --bg-input: #514869;
+    --color-title: #77ffc0;
+    --color-card-title: #00ff88;
 }
 
-body * {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@100&display=swap');
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+html {
+    font-size: 2rem;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+    background: #201b2c;
+    margin: 60px 40px;
+    height: 100vh;
+}
+
+p {
+    padding: 0 20px;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+
 .main-sobre { 
-    width: 100vw;
-    height: 100vh;
-    background: #201b2c;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    gap: 80px;
 }
 
 .sup-sobre {
-    width: 50vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 40px;
 }
 
 .sup-sobre > h1 {
+    text-align: center;
     color:#77ffc0;
-    font-size: 3vw;
 }
 
 .sup-sobre > p {
     color:#77ffc0;
-    font-size: 2vw;
 }
 
 .inf-sobre {
-    width: 50vw;
-    height: auto;
+    height: 100px;
+    align-self: stretch;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 
-
-
 .valores {
-    width: 50vw;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .missao {
-    width: 50vw;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.valores > h2 {
-    color:#77ffc0;
-    font-size: 2vw;
+a {
+    text-decoration: none;
 }
 
-.missao > h2 {
+a:hover {
+    text-decoration: underline;
+}
+
+.valores > h2 a {
     color:#77ffc0;
-    font-size: 2vw;
+}
+
+.missao > h2 a {
+    color:#77ffc0;
 }
