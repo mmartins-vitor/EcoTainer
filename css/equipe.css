@@ -19,6 +19,7 @@
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 a {
@@ -29,40 +30,50 @@ body {
     background-color: var(--bg-color);
     font-family: Arial, Helvetica, sans-serif;
     margin: 40px;
+    color: #fff;
+    font-size: 1.2em;
 }
 
 h1 { 
     text-align: center;
-    background-color: red;
+    color: red;
     margin-bottom: 40px;
 }
 
 p.team-description {
     text-align: justify;
-    max-width: 500px;
     text-align: center;
-    background-color: rgb(187, 187, 99);
     margin: 40px auto;
     padding: 20px
 }
 
 main {
-    background-color: yellow;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px;
 }
 
 main div.grid-profile {
-    background-color: green;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-main div div.profile-details {
-    display: grid;
-    background-color: #d92e7f;
+main div.grid-profile img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
+
+main div div.profile-details {
+    background-color: #000;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+
 
 main div div.profile-details h2 {
     text-align: center;
@@ -70,32 +81,40 @@ main div div.profile-details h2 {
 
 main div div.profile-details h4 {
     text-align: center;
+    color: red;
 }
 
 main div div.profile-details blockquote  {
-    background-color: red;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
     text-align: center;
+    gap: 20px;
+    padding: 10px;
+
 }
 
 main div div.profile-details blockquote p {
-    background-color: yellow;
     text-align: right;
+    color: yellow;
 }
 
 main div div.profile-details nav {
-    background-color: gray;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 8px;
+    
 }
 
-main div div.profile-details nav a {
-    flex: 1;
+main div.grid-profile nav a {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
     align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 main div.grid-profile nav a img {
     width: 20px;
+    height: 20px;
 }
