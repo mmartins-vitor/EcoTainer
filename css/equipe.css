@@ -2,7 +2,7 @@
     --bg-fundo-destaque: #010102c7;
     --bg-color: #201b2c;
     --bg-btn-login: #00ff88;
-    --bg-input: #514869;
+    --bg-input: #51486933;
     --color-title: #77ffc0;
     --color-card-title: #00ff88;
     --bg-icone-facebook: #4267B2;
@@ -34,7 +34,7 @@ body {
     background-color: var(--bg-color);
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
-    margin-top: 40px;
+    margin: 60px 0;
     font-size: 1.2em;
 }
 
@@ -51,8 +51,13 @@ p.team-description {
 }
 
 main {
+    width: 100%;
+}
+
+main div.grid-container {
+    background-color: var(--bg-input);
+    border-radius: 4px;
     max-width: 1300px;
-    height: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -60,19 +65,19 @@ main {
     padding: 30px;
 }
 
-main div.grid-profile {
+main div.grid-container div.grid-profile {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 400px 1fr;
 }
 
-main div.grid-profile img {
+main div.grid-container div.grid-profile img {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 
-main div div.profile-details {
+main div.grid-container div div.profile-details {
     background-color: #000;
     display: flex;
     flex-flow: column wrap;
@@ -84,16 +89,16 @@ main div div.profile-details {
 }
 
 
-main div div.profile-details h2 {
+main div.grid-container div div.profile-details h2 {
     text-align: center;
 }
 
-main div div.profile-details h4 {
+main div.grid-container div div.profile-details h4 {
     text-align: center;
     color: red;
 }
 
-main div div.profile-details blockquote  {
+main div.grid-container div div.profile-details blockquote  {
     display: flex;
     flex-flow: column wrap;
     justify-content: start;
@@ -103,19 +108,18 @@ main div div.profile-details blockquote  {
 
 }
 
-main div div.profile-details blockquote p {
+main div.grid-container div div.profile-details blockquote p {
     text-align: right;
-    color: yellow;
 }
 
-main div div.profile-details nav {
+main div.grid-container div div.profile-details nav {
     display: flex;
     justify-content: center;
     gap: 8px;
     
 }
 
-main div.grid-profile nav a {
+main div.grid-container div.grid-profile nav a {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -123,16 +127,16 @@ main div.grid-profile nav a {
     border-radius: 4px;
 }
 
-main div.grid-profile nav a img {
+main div.grid-container div.grid-profile nav a img {
     width: 20px;
     height: 20px;
 }
 
-main div.grid-profile a.fb:hover {
+main div.grid-container div.grid-profile a.fb:hover {
     background-color: var(--bg-icone-facebook);
 }
 
-main div.grid-profile nav.profile-links a.li:hover {
+main div.grid-container div.grid-profile nav.profile-links a.li:hover {
     background-color: var(--bg-icone-linkedin);
 }
 
@@ -144,15 +148,22 @@ nav.profile-links a.git:hover {
     background-color: var(--bg-icone-github);
 }
 
+main div.grid-container div.grid-profile:nth-child(5){
+    grid-area: 2 / 3;
+}
+
 @media (max-width:900px) {
-    main {
-        background: red;
+    main div.grid-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
     }
 
-    main div.grid-profile {
+    main div.grid-container div.grid-profile {
         justify-self: center;
         max-width: 500px;
+    }
+
+    main div.grid-container div.grid-profile:nth-child(5){
+        grid-area: auto;
     }
 }
