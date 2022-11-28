@@ -1,0 +1,100 @@
+:root {
+    --bg-fundo-destaque: #010102c7;
+    --bg-color: #201b2c;
+    --bg-btn-login: #00ff88;
+    --bg-input: #514869;
+    --color-title: #77ffc0;
+    --color-card-title: #00ff88;
+    --bg-icone-facebook: #4267B2;
+    --bg-icone-twitter: #36B9FF;
+    --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --bg-icone-youtube: #F20000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    height: 97vh;
+    justify-content: center;
+}
+
+div.card-cadastro {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--bg-fundo-destaque);
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+div.card-cadastro h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+div.card-cadastro form div {
+    background-color: var(--bg-input);
+    padding: 25px 20px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+
+form div.textfield div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--bg-input);
+}
+
+div.card-cadastro form div input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--bg-input);
+    color: #f0ffffde;
+    font-size: 16pt;
+    box-shadow: 0px 10px 40px #000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+div.card-cadastro form .btn-cadastro {
+    align-self: center;
+    padding: 12px 20px;
+    margin: 25px;
+    font-size: inherit;
+    border: none;
+    border-radius: 6px;
+    font-weight: 800;
+    color: #2b134b;
+    background: var(--bg-btn-login);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff5082;
+}
+
+div.card-cadastro form .btn-cadastro:hover {
+    background-color: #039c55;
+}

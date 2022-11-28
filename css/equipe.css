@@ -1,0 +1,101 @@
+:root {
+    --bg-fundo-destaque: #010102c7;
+    --bg-color: #201b2c;
+    --bg-btn-login: #00ff88;
+    --bg-input: #514869;
+    --color-title: #77ffc0;
+    --color-card-title: #00ff88;
+    --bg-icone-facebook: #4267B2;
+    --bg-icone-twitter: #36B9FF;
+    --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --bg-icone-youtube: #F20000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+}
+
+h1 { 
+    text-align: center;
+    background-color: red;
+    margin-bottom: 40px;
+}
+
+p.team-description {
+    text-align: justify;
+    max-width: 500px;
+    text-align: center;
+    background-color: rgb(187, 187, 99);
+    margin: 40px auto;
+    padding: 20px
+}
+
+main {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+main div.grid-profile {
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+main div div.profile-details {
+    display: grid;
+    background-color: #d92e7f;
+}
+
+main div div.profile-details h2 {
+    text-align: center;
+}
+
+main div div.profile-details h4 {
+    text-align: center;
+}
+
+main div div.profile-details blockquote  {
+    background-color: red;
+    text-align: center;
+}
+
+main div div.profile-details blockquote p {
+    background-color: yellow;
+    text-align: right;
+}
+
+main div div.profile-details nav {
+    background-color: gray;
+    display: flex;
+    gap: 20px;
+}
+
+main div div.profile-details nav a {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main div.grid-profile nav a img {
+    width: 20px;
+}
