@@ -3,6 +3,9 @@ const toggle = document.querySelector('[toggle]');
 const links = document.querySelector('#list_links');
 const price = document.querySelectorAll('.grid-item-price');
 const small_menu = document.createElement('div');
+const containers = Array.from(document.querySelector('div.grid-list-items').children);
+
+containers.forEach((container,index) => container.children[1].textContent = `Container ${index+1}`);
 
 price.forEach(value => {
     value.textContent = Number(value.textContent).toLocaleString('pt-br', {
