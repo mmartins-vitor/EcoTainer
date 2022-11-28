@@ -6,6 +6,8 @@
     --color-title: #77ffc0;
     --color-card-title: #00ff88;
     --bg-icone-facebook: #4267B2;
+    --bg-icone-github: #F04F33;
+    --bg-icone-linkedin: #0275B4;
     --bg-icone-twitter: #36B9FF;
     --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
     --bg-icone-youtube: #F20000;
@@ -27,27 +29,31 @@ a {
 }
 
 body {
+    height: 100%;
+    height: 100%;
     background-color: var(--bg-color);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px;
     color: #fff;
+    margin-top: 40px;
     font-size: 1.2em;
 }
 
 h1 { 
     text-align: center;
     color: red;
-    margin-bottom: 40px;
 }
 
 p.team-description {
     text-align: justify;
     text-align: center;
-    margin: 40px auto;
-    padding: 20px
+    margin-bottom: 30px;
+    padding: 40px
 }
 
 main {
+    max-width: 1300px;
+    height: 100%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
@@ -55,9 +61,10 @@ main {
 }
 
 main div.grid-profile {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 400px 1fr;
 }
 
 main div.grid-profile img {
@@ -71,7 +78,9 @@ main div div.profile-details {
     flex-flow: column wrap;
     justify-content: center;
     gap: 10px;
-    border-radius: 4px;
+    padding: 20px 10px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 
@@ -117,4 +126,33 @@ main div.grid-profile nav a {
 main div.grid-profile nav a img {
     width: 20px;
     height: 20px;
+}
+
+main div.grid-profile a.fb:hover {
+    background-color: var(--bg-icone-facebook);
+}
+
+main div.grid-profile nav.profile-links a.li:hover {
+    background-color: var(--bg-icone-linkedin);
+}
+
+nav.profile-links a.ins:hover {
+    background-image: var(--bg-icone-insta);
+}
+
+nav.profile-links a.git:hover {
+    background-color: var(--bg-icone-github);
+}
+
+@media (max-width:900px) {
+    main {
+        background: red;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    main div.grid-profile {
+        justify-self: center;
+        max-width: 500px;
+    }
 }
