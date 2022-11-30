@@ -1,0 +1,446 @@
+:root {
+    --bg-fundo-destaque: #010102;
+    --bg-color: #201b2c;
+    --bg-btn-login: #00ff88;
+    --bg-input: #514869;
+    --color-title: #77ffc0;
+    --color-card-title: #00ff88;
+    --bg-icone-facebook: #4267B2;
+    --bg-icone-twitter: #36B9FF;
+    --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --bg-icone-youtube: #F20000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--bg-fundo-destaque);
+    height: 100px;
+    display: flex;
+    position: relative;
+}
+
+header ul {
+    flex: 1;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+header ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li a {
+    background-color: var(--bg-btn-login);
+    color: var(--bg-color);
+    border-radius: 8px;
+    padding: 16px 60px;
+}
+
+header ul li a:hover {
+    transition-duration: 0.5s;
+    box-shadow: 3px 2px 5px rgba(255, 255, 255, 0.411);
+    border: 2.5px solid var(--bg-btn-login) ;
+    background-color: #00ff88a8;
+}
+
+
+span.material-symbols-outlined {
+  display: none;
+  cursor: pointer;
+  position: absolute;  
+  border-radius: 4px;
+  align-self: center;  
+  padding: 10px;  
+  background-color: #fafafa;
+}
+
+div.small_menu_container {
+    background-color: var(--bg-fundo-destaque);
+    padding-bottom: 50px;
+}
+
+.small_menu {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+    text-align: center;
+    background-color: #fafafa;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 4px;
+}
+
+.small_menu li {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+}
+
+.small_menu li a {
+    flex: 1;
+    padding: 10px;
+}
+
+span.material-symbols-outlined:hover,
+.small_menu li a:hover {
+    background-color: #dadada;
+}
+
+
+main {
+    /* background-color: #00ff88; */
+    padding: 40px;
+}
+
+main div.grid-product {
+    background-color: var(--bg-input);
+    margin: auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    /* gap: 10px; */
+    border-radius: 4px;
+    border: 1px solid rgb(117, 117, 117);
+}
+
+main div.grid-product img {
+    grid-row: 1 / -1;
+    width: 100%;
+}
+
+main div.grid-product div.product-details {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+main div.grid-product div.product-details {
+    width: 100%;
+    height: 100%;
+}
+
+main div.grid-product div.product-details * {
+    flex: 1;
+}
+
+main div.grid-product div.product-details .type-product {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+}
+
+main div.grid-product div.product-details div {
+    display: flex;
+}
+
+main div.grid-product div.product-details p {
+    font-weight: bold;
+}
+
+main div.grid-product div.product-details div span {
+    font-weight: normal;
+    color: yellow;
+}
+
+main div.grid-product div.product-details p,
+main div.grid-product div.product-details span {
+    font-size: 18px;
+    color: #fff;
+}
+
+main div.grid-product .buy-options {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+main div.grid-product .buy-options .types-of-payment {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main div.grid-product .buy-options .types-of-payment img {
+    width: 45px;
+}
+
+main div.grid-product .buy-options button {
+    background-color: var(--bg-btn-login);
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 8px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+main div.grid-product .buy-options button:hover {
+    transition-duration: 0.5s;
+    box-shadow: 3px 2px 5px rgba(255, 255, 255, 0.411);
+    border: 2.9px solid var(--bg-btn-login) ;
+    background-color: #00ff887e;
+}
+
+
+
+
+
+
+
+
+aside {
+    background-color: var(--bg-fundo-destaque);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+}
+
+aside div {
+    flex: 1;
+}
+
+aside div h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+aside a img {
+    width: 150px;
+}
+
+footer {
+    background-color: var(--bg-fundo-destaque);
+    display: flex;
+    flex-flow: column wrap;
+    grid-template-rows: 1fr auto;
+}
+
+footer div.grid-container {
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 80px 0;
+    gap: 10px;
+}
+
+footer div.grid-container div {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+footer div.grid-container div h4 {
+    padding: 8px;
+}
+
+footer div.grid-container div ul {
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+    justify-content: start;
+    padding: 10px 0;
+}
+
+footer div.grid-container div ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+}
+
+footer div.grid-container div ul li a:hover {
+    text-decoration: underline;
+}
+
+footer div.grid-container div ul li a img.fb:hover {
+    background-color: var(--bg-icone-facebook);
+}
+
+footer div.grid-container div ul li a img.tt:hover {
+    background-color: var(--bg-icone-twitter);
+}
+
+footer div.grid-container div ul li a img.ins:hover {
+    background-image: var(--bg-icone-insta);
+}
+
+footer div.grid-container div ul li a img.yt:hover {
+    background-color: var(--bg-icone-youtube);
+}
+
+footer div.grid-container div ul li a,
+footer div.grid-container div ul li a p,
+footer .info-address p {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer div.grid-container img {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2px;
+    width: 25px;
+}
+
+footer .info-address {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+footer .info-address p {
+    padding: 0 20px;
+}
+
+footer .info-address div {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+footer .info-address img {
+    width: 45px;
+}
+/* Configura o display do aside para grid */
+@media (max-width:1000px) {
+
+    aside {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    aside div {
+        grid-column: 1 / -1;
+    }
+
+    aside a.app_store {
+        grid-area: 2 / 1 / -1 / 2;
+        place-self: center end;
+    }
+
+    aside a.google_play {
+        grid-area: 2 / 2 / -1 / -1;
+        place-self: center start;
+    }
+}
+
+/* Momento em que mostro o toggle */
+@media (max-width:816px) {
+
+    header {
+        justify-content: center;
+    }
+
+    header ul {
+        display: none;
+    }
+    
+    span.material-symbols-outlined {
+        display: block;
+        flex: 1;
+    }
+
+    [list_links] {
+        display: block;
+    }
+
+}
+
+/* configura o display do footer */
+@media (max-width:810px){
+
+    footer p#footer_gmail,
+    footer p#footer_phone,
+    footer p#footer_adress {
+        display: none;
+    }
+}
+@media (max-width:600px) {
+    footer div.grid-container {
+        grid-template-columns: 1fr;
+        padding: 40px 0 60px 0;
+        gap: 60px;
+    }
+
+    footer div.grid-container div h4 {
+        text-align: center;
+    }
+
+    footer div.grid-container div ul {
+        width: 100%;
+        align-items: center;
+    }
+
+    footer div.grid-container div ul li a {
+        justify-content: center;
+    }
+
+    footer div.grid-container div.social ul li {
+        width: 130px;
+    }
+
+    footer div.grid-container div.social ul li a {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 569px) { 
+
+    main div.grid-list-items {
+        grid-template-columns: 1fr;
+    }
+
+    aside div p {
+        display: none;
+    }
+}

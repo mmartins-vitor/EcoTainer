@@ -1,0 +1,106 @@
+:root {
+    --bg-fundo-destaque: #010102c7;
+    --bg-color: #201b2c;
+    --bg-btn-login: #00ff88;
+    --bg-input: #51486933;
+    --color-title: #77ffc0;
+    --color-card-title: #00ff88;
+    --bg-icone-facebook: #4267B2;
+    --bg-icone-github: #F04F33;
+    --bg-icone-linkedin: #0275B4;
+    --bg-icone-twitter: #36B9FF;
+    --bg-icone-insta: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    --bg-icone-youtube: #F20000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+*/
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    height: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+nav {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 30px;
+}
+
+
+form.containerForm {
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+form.containerForm div.input {
+    display: flex;
+    gap: 10px;
+    font-size: inherit;
+}
+
+
+form.containerForm div.input input {
+    font-size: 16px;
+}
+
+form.containerForm div.btnAltera {
+    margin-bottom: 40px;
+}
+
+form.containerForm div.btnAltera input {
+    padding: 5px 8px;
+}
+
+form.containerForm div.btnAltera input {
+	font-size: 18px;
+	background: #00FF88;
+}
+
+form.containerForm div.btnAltera input:hover {
+	background:#00E479;
+}
+
+form.containerForm div.btnAltera input {
+    padding: 5px 8px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
